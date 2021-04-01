@@ -1,0 +1,60 @@
+{
+  "editor.fontFamily": "Fira Code, Ubuntu Mono",
+  "editor.fontSize": 20,
+  "editor.quickSuggestionsDelay": 30,
+  "editor.letterSpacing": 0.5,
+  "html.format.enable": true,
+  "html.format.preserveNewLines": true,
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "editor.fontWeight": "400",
+  "editor.colorDecorators": true,
+  "editor.minimap.enabled": false,
+  "workbench.activityBar.visible": true,
+  "editor.renderWhitespace": "none",
+  "editor.rulers": [80, 100],
+  "editor.minimap.showSlider": "always",
+  "extensions.ignoreRecommendations": true,
+  "workbench.editor.tabCloseButton": "right",
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.alwaysShowStatus": true,
+  "window.closeWhenEmpty": true,
+  "editor.detectIndentation": true,
+  "files.insertFinalNewline": true,
+  "editor.showFoldingControls": "always",
+  "editor.find.seedSearchStringFromSelection": true,
+  "editor.matchBrackets": "always",
+  "workbench.editor.enablePreview": false,
+  "editor.scrollBeyondLastLine": true,
+  "editor.formatOnPaste": true,
+  "editor.parameterHints.enabled": false,
+  "editor.fontLigatures": true,
+  "workbench.tree.indent": 20,
+  "editor.lineHeight": 40,
+  "window.zoomLevel": -0.2,
+  "files.associations": {
+    "*.handlebars": "html"
+  },
+  "[c]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "workbench.iconTheme": "Monokai Pro (Filter Spectrum) Icons",
+  "terminal.integrated.fontFamily": "monospace",
+  "editor.cursorStyle": "block",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.editor.limit.enabled": true,
+  "workbench.editor.tabSizing": "shrink",
+  "workbench.colorTheme": "Monokai Pro (Filter Spectrum)",
+  "window.menuBarVisibility": "toggle",
+  "explorer.sortOrder": "type"
+}
