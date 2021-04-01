@@ -1,0 +1,135 @@
+@use 'sass:map';
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  height: 12rem;
+  background: $panel-bg;
+  transition: 0.2s ease;
+  margin: 0 0 2rem 0;
+
+  &:hover {
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.275)!important;
+    cursor: pointer;
+  }
+
+
+  &__image {
+    margin-right: 1rem;
+
+    & img {
+      height: 12rem;
+      width: 10rem;
+      object-fit: cover;
+    }
+  }
+
+  &__info {
+    padding: 1rem 0;
+    flex: auto;
+
+    &__title {
+      color: $text-color;
+      font-family: $font-family-headings;
+      font-size: 2rem;
+      margin: 0 0 0.5rem 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 700px;
+    }
+
+    &__date {
+      color: $text-grey;
+      font-family: $font-family-headings;
+      margin: 0 0 1rem 0;
+    }
+
+    &__description {
+      color: $text-grey;
+      font-family: $font-family-body;
+    }
+  }
+
+  &__number {
+    padding: 0 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__container {
+      background: $btn-bg;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      & p {
+        color: $text-color;
+        font-size: 2rem;
+        font-family: $font-family-body;
+        font-weight: bold;
+      }
+    }
+
+  }
+}
+
+@media (max-width: map.get($container-max-widths, "lg")) {
+  .card {
+    &__info {
+      &__title {
+        width: 500px;
+      }
+    }
+  }
+}
+
+@media (max-width: map.get($container-max-widths, "md")) {
+  .card {
+    flex-direction: column;
+    height: 24rem;
+    position: relative;
+
+    &__image {
+      margin-right: 0;
+
+      & img {
+        height: 12rem;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__number {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      padding: 0;
+    }
+
+    &__info {
+      padding: 1rem;
+
+      &__title {
+        width: 700px;
+      }
+    }
+  }
+}
+
+@media (max-width: map.get($container-max-widths, "md")) {
+  .card {
+    &__info {
+      padding: 1rem;
+
+      &__title {
+        width: 300px;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+

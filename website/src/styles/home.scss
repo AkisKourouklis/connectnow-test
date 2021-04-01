@@ -1,0 +1,22 @@
+@use 'sass:map';
+
+.home {
+  display: grid;
+  grid-template-columns: 2fr 6fr;
+  gap: 2rem;
+}
+
+@media (max-width: map.get($container-max-widths, "xl")) {
+  .home {
+    grid-template-columns: 1fr;
+    gap: 5rem;
+  }
+}
+
+@media (max-width: map.get($container-max-widths, "md")) {
+  .home {
+    display: flex;
+    flex-direction: column;
+  }
+}
+

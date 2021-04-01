@@ -1,0 +1,47 @@
+@use 'sass:map';
+@import './variables.scss';
+@import './navbar.scss';
+@import './filters';
+@import './home';
+@import './card';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: $body-bg;
+  background-color: #f1f1f1;
+  padding: 8rem 10rem;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.loading {
+  text-align: center;
+
+  & svg {
+    color: $text-color;
+    font-size: 2.5rem;
+    animation: spin 2s linear infinite;
+  }
+}
+
+@media (max-width: map.get($container-max-widths, "xl")) {
+  body {
+    padding: 5rem 1rem;
+  }
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
