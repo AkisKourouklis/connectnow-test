@@ -29,8 +29,8 @@ export interface IUserState {
 }
 
 export interface IFilters {
-  query: string | null
-  score: string | null
+  query: string
+  score: string
   order_asc: boolean
-  order_type: 'score' | 'name' | null
+  order_type: 'score' | 'name'
 }

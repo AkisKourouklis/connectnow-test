@@ -9,10 +9,9 @@
   margin: 0 0 2rem 0;
 
   &:hover {
-    box-shadow: 0 1rem 3rem rgba(0,0,0,.275)!important;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.275) !important;
     cursor: pointer;
   }
-
 
   &__image {
     margin-right: 1rem;
@@ -73,11 +72,10 @@
         font-weight: bold;
       }
     }
-
   }
 }
 
-@media (max-width: map.get($container-max-widths, "lg")) {
+@media (max-width: map.get($container-max-widths, 'lg')) {
   .card {
     &__info {
       &__title {
@@ -87,7 +85,7 @@
   }
 }
 
-@media (max-width: map.get($container-max-widths, "md")) {
+@media (max-width: map.get($container-max-widths, 'md')) {
   .card {
     flex-direction: column;
     height: 24rem;
@@ -120,7 +118,7 @@
   }
 }
 
-@media (max-width: map.get($container-max-widths, "md")) {
+@media (max-width: map.get($container-max-widths, 'md')) {
   .card {
     &__info {
       padding: 1rem;
@@ -132,4 +130,3 @@
     }
   }
 }
-

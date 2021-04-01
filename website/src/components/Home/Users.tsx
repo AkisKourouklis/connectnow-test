@@ -8,15 +8,63 @@ const Users: FC = () => {
   const { users } = useSelector((state: State) => state.users)
   const { query, order_asc, score, order_type } = useSelector((state: State) => state.filters)
 
-  console.log(query, order_asc, score, order_type)
+  const filteredUsers = order_asc
+    ? users
+        ?.filter((q) => {
+          return query === '' ? true : q.name.toLocaleLowerCase().includes(query)
+        })
+        ?.filter((s) => {
+          return s.rating >= Number(score)
+        })
+        ?.sort((a, b) => {
+          if (order_type === 'name') {
+            const fa = a.name.toLowerCase()
+            const fb = b.name.toLowerCase()
+
+            if (fa < fb) {
+              return -1
+            }
+            if (fa > fb) {
+              return 1
+            }
+            return 0
+          } else {
+            return a.rating - b.rating
+          }
+        })
+    : users
+        ?.filter((q) => {
+          return q.name.toLocaleLowerCase().includes(query)
+        })
+        ?.filter((s) => {
+          return s.rating > Number(score)
+        })
+        ?.sort((a, b) => {
+          if (order_type === 'name') {
+            const fa = a.name.toLowerCase()
+            const fb = b.name.toLowerCase()
+
+            if (fa < fb) {
+              return -1
+            }
+            if (fa > fb) {
+              return 1
+            }
+            return 0
+          } else {
+            return a.rating - b.rating
+          }
+        })
+        ?.reverse()
+
   return (
     <>
-      {!users ? (
+      {!filteredUsers ? (
         <div className="loading">
           <AiOutlineLoading />
         </div>
       ) : (
-        users?.map(({ rating, summary, first_release_date, id, name }) => {
+        filteredUsers?.map(({ rating, summary, first_release_date, id, name }) => {
           return (
             <Card
               key={id}

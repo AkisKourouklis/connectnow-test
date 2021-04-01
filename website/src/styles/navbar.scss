@@ -16,7 +16,7 @@
 
   &__link1--active {
     &:before {
-      content: "VIDEO";
+      content: 'VIDEO';
       position: absolute;
       top: -50px;
       left: -50px;
@@ -28,7 +28,7 @@
 
   &__link2--active {
     &:before {
-      content: "CONTACT";
+      content: 'CONTACT';
       position: absolute;
       top: -50px;
       left: -50px;
@@ -37,17 +37,16 @@
       z-index: -1;
     }
   }
-
 }
 
-@media (max-width: map.get($container-max-widths, "xl")) {
+@media (max-width: map.get($container-max-widths, 'xl')) {
   .navbar {
     flex-direction: column;
     gap: 3rem;
   }
 }
 
-@media (max-width: map.get($container-max-widths, "sm")) {
+@media (max-width: map.get($container-max-widths, 'sm')) {
   .navbar {
     margin: 0 0 2rem 1rem;
     gap: 1rem;

@@ -33,7 +33,7 @@ a {
   }
 }
 
-@media (max-width: map.get($container-max-widths, "xl")) {
+@media (max-width: map.get($container-max-widths, 'xl')) {
   body {
     padding: 5rem 1rem;
   }

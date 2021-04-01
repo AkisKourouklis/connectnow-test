@@ -19,6 +19,10 @@
       color: $text-color;
       font-size: 1rem;
       font-family: $font-family-headings;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 
@@ -88,7 +92,8 @@
     margin: 0 0 0.5rem 0;
   }
 
-  & input, select {
+  & input,
+  select {
     background: $input-bg;
     height: 3rem;
     border: none;
@@ -103,15 +108,15 @@
     color: $text-grey;
   }
 
-  & input:focus, select:focus {
+  & input:focus,
+  select:focus {
     border-bottom: 1px solid $text-color;
     outline: none;
   }
 }
 
-@media (max-width: map.get($container-max-widths, "xl")) {
+@media (max-width: map.get($container-max-widths, 'xl')) {
   .filters {
-
     &__mobile {
       display: flex;
       gap: 2rem;
@@ -125,13 +130,11 @@
     &__clear {
       margin: 3.7rem 0 0 0;
     }
-
   }
 }
 
-@media (max-width: map.get($container-max-widths, "xl")) {
+@media (max-width: map.get($container-max-widths, 'xl')) {
   .filters {
-
     &__mobile {
       display: block;
       align-items: center;
@@ -154,6 +157,5 @@
         width: 100%;
       }
     }
-
   }
 }

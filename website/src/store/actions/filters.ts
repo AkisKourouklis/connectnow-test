@@ -3,6 +3,7 @@ import {
   FILTERS_LOAD_QUERY,
   FILTERS_LOAD_ORDER_TYPE,
   FILTERS_LOAD_ORDER_ASC,
+  FILTERS_CLEAR,
 } from '../types'
 import { AnyAction, Dispatch } from 'redux'
 
@@ -34,6 +35,10 @@ const orderASC = (order_asc: boolean): AnyAction => ({
   },
 })
 
+const clear = (): AnyAction => ({
+  type: FILTERS_CLEAR,
+})
+
 export const loadScore = (num: number) => {
   return (dispatch: Dispatch): void => {
     dispatch(score(num))
@@ -55,5 +60,11 @@ export const loadOrderType = (type: 'score' | 'name') => {
 export const loadOrderASC = (asc: boolean) => {
   return (dispatch: Dispatch): void => {
     dispatch(orderASC(asc))
+  }
+}
+
+export const filtersClear = () => {
+  return (dispatch: Dispatch): void => {
+    dispatch(clear())
   }
 }

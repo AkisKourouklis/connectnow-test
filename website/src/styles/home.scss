@@ -6,17 +6,16 @@
   gap: 2rem;
 }
 
-@media (max-width: map.get($container-max-widths, "xl")) {
+@media (max-width: map.get($container-max-widths, 'xl')) {
   .home {
     grid-template-columns: 1fr;
     gap: 5rem;
   }
 }
 
-@media (max-width: map.get($container-max-widths, "md")) {
+@media (max-width: map.get($container-max-widths, 'md')) {
   .home {
     display: flex;
     flex-direction: column;
   }
 }
-

@@ -32,9 +32,9 @@ const initialState: State = {
   },
   filters: {
     order_asc: false,
-    order_type: null,
-    query: null,
-    score: null,
+    order_type: 'name',
+    query: '',
+    score: '',
   },
 }
 
@@ -51,5 +51,5 @@ const makeStore: MakeStore<State> = () =>
 
 // export an assembled wrapper
 export const wrapper = createWrapper<State>(makeStore, {
-  debug: env === 'development' ? true : false,
+  debug: env === 'development',
 })
