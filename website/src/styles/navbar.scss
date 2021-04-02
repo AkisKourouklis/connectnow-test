@@ -39,17 +39,33 @@
   }
 }
 
-@media (max-width: map.get($container-max-widths, 'xl')) {
+@media (max-width: map.get($container-max-widths, 'lg')) {
   .navbar {
     flex-direction: column;
     gap: 3rem;
+
+    &__link1--active {
+      &:before {
+        font-size: 4rem;
+        top: -2.5rem;
+        left: -2rem;
+      }
+    }
+
+    &__link2--active {
+      &:before {
+        font-size: 4rem;
+        top: -2.5rem;
+        left: -2rem;
+      }
+    }
   }
 }
 
 @media (max-width: map.get($container-max-widths, 'sm')) {
   .navbar {
     margin: 0 0 2rem 1rem;
-    gap: 1rem;
+    gap: 2rem;
 
     & p {
       font-size: 1.5rem;
@@ -57,17 +73,17 @@
 
     &__link1--active {
       &:before {
-        font-size: 3rem;
-        top: -2rem;
-        left: -2rem;
+        font-size: 2.5rem;
+        top: -1.5rem;
+        left: -1.5rem;
       }
     }
 
     &__link2--active {
       &:before {
-        font-size: 3rem;
-        top: -2rem;
-        left: -2rem;
+        font-size: 2.5rem;
+        top: -1.5rem;
+        left: -1.5rem;
       }
     }
   }

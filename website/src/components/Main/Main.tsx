@@ -8,7 +8,6 @@ const Main: FC = ({ children }) => {
       <main>
         <div>{children}</div>
       </main>
-      <footer>footer</footer>
     </>
   )
 }
