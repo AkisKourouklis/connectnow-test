@@ -20,7 +20,7 @@ const Filters: FC = () => {
   }
 
   const handleScore = (e): void => {
-    const score = e.target.value < 1 ? 1 : e.target.value > 100 ? 100 : e.target.value
+    const score = e.target.value < 0 ? 0 : e.target.value > 100 ? 100 : e.target.value
 
     dispatch(loadScore(score))
   }
